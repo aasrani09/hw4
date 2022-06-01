@@ -1,18 +1,32 @@
+<div class="container">
 <% if @current_user %>
+<p>
 <h1><%= @place["name"] %></h1>
-
+</p>
 <h2>My Posts</h2>
+<p>
+<div class="row">
 <% for post in @posts %>
-  <h3><%= post["title"] %></h3>
-  <h4><%= post["posted_on"] %></h4>
+  <div class="col-md-4 col-sm-6">
+  <h4><%= post["title"] %></h3>
+  <h5><%= post["posted_on"] %></h4>
   <p><%= post["description"] %></p>
+  <p>      <img class="img-fluid" src="<%= post["image"] %>" class="w-full">
+</p>
+
+  </div>
 <% end %>
+</div>
+</p>
+
+
 
 <p>
-  <a href="/posts/new?place_id=<%= @place["id"] %>">New Post</a>
+  <button type="button" class="btn btn-success"><a href="/posts/new?place_id=<%= @place["id"] %>"class="link-light">New Post</a></button>
 </p>
 
 <p>
-  <a href="/places">Back to All Places</a>
+  <button type="button" class="btn btn-light">  <a href="/places">Back to All Places</a></button>
 </p>
 <% end %>
+</div>
