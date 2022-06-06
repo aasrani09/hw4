@@ -22,7 +22,6 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
   adapter: postgresql
   database: places-ive-been-hw4_production
   username: places-ive-been-hw4
