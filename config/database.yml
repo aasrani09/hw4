@@ -25,4 +25,4 @@ production:
   adapter: postgresql
   database: places-ive-been-hw4_production
   username: places-ive-been-hw4
-  password: <%= ENV["TACOGRAM_FINAL_DATABASE_PASSWORD"] %>
+  password: <%= ENV["PLACES-IVE-BEEN-HW4_DATABASE_PASSWORD"] %>
